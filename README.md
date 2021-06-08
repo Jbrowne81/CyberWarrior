@@ -49,15 +49,15 @@ Collects / records web server metrics, such as uptime and CPU usage. Displays da
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name		| Function                                   | Private IP Address|     Public IP         | Operating System |
-|--------------------|--------------------------------------|-----------------------  |---------------------|------------------------ |
-| Jump Box	| Gateway			| 10.0.0.1	  | 20.83.225.130  | Linux Ubuntu        |
-| Load Balancer	| Distribute Network Traffic	|		  | 13.66.246.231  | Linux Ubuntu        |
-| Web-1	| store, process and deliver	| 10.0.0.10	  | 13.66.246.231  | Linux Ubuntu        |
+| Name		| Function                      | Private IP Address	| Public IP      | Operating System		|
+|---------------|-------------------------------|-----------------------|---------------------|------------------------ |
+| Jump Box	| Gateway			| 10.0.0.1		| 20.83.225.130  | Linux Ubuntu			|
+| Load Balancer	| Distribute Network Traffic	|		  	| 13.66.246.231  | Linux Ubuntu			|
+| Web-1		| store, process and deliver	| 10.0.0.10	  	| 13.66.246.231  | Linux Ubuntu			|
                                 web pages                             
-| Web-2	| store, process and deliver	| 10.0.0.11	  | 13.66.246.231  | Linux Ubuntu        |
+| Web-2		| store, process and deliver	| 10.0.0.11	  	| 13.66.246.231  | Linux Ubuntu			|
                                 web pages                             
-| Elk Server	| Logs Files, Metric		| 10.1.0.4	  | 20.62.88.5         | Linux Ubuntu        |
+| Elk Server	| Logs Files, Metric		| 10.1.0.4	  	| 20.62.88.5     | Linux Ubuntu			|
 		   Monitoring 
 
 ### Access Policies
@@ -80,13 +80,13 @@ Private IP: 10.0.0.15
 
 A summary of the access policies in place can be found in the table below.
 
-| Name		| Publicly Accessible   |  Allowed IP Addresses                                                 	|
-|--------------------|--------------------------- |----------------------------------------------------------------------------|
-| Jump Box	| Yes                              | Home Public IP (SSH) 68.2.47.114                             	|
-| Load Balancer	| Yes                              | Home Public  (68.2.47.114)                                        	|
-| Web-1	| No                               | Home Public (68.2.47.114), Jump Box (10.0.0.15) 	|
-| Web-2	| No                               | Home Public (68.2.47.114), Jump Box (10.0.0.15) 	|
-| ELK Server	| No                               | Home Public (68.2.47.114), Jump Box (10.0.0.15)		|
+| Name		| Publicly Accessible   |  Allowed IP Addresses                                 |
+|---------------|--------------------------- |--------------------------------------------------|
+| Jump Box	| Yes			| Home Public IP (SSH) 68.2.47.114			|
+| Load Balancer	| Yes			| Home Public  (68.2.47.114)				|
+| Web-1		| No			| Home Public (68.2.47.114), Jump Box (10.0.0.15) 	|
+| Web-2		| No			| Home Public (68.2.47.114), Jump Box (10.0.0.15) 	|
+| ELK Server	| No			| Home Public (68.2.47.114), Jump Box (10.0.0.15)	|
 
 
 ### Elk Configuration
@@ -145,9 +145,15 @@ Red_Team_VM2 (Peered to Red_Team_VM)
 5. Add New Elk Server to Network Security Group:
 ELKServer-nsg
 
+6. install-elk.yml breakdown
+     -Installation of docker container
+     -Install Python 3 – automates and monitors operating system
+     -Increase and use additional virtual memory
+     -Download and launch Elk container (sebp/elk:761)
+     -Elk container runs on ports 5601, 9200, and 5044 
+
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance
- 
 
 Update the path with the name of your screenshot of docker ps 
 GitHub url: https://github.com/Jbrowne81/CyberWarrior/blob/main/Screenshots/ELK%20Server%20-%20docker%20ps%20command%20(screenshot).pdf
