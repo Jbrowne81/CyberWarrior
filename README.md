@@ -27,7 +27,7 @@ Load Balancers protect the system from DDoS attacks by shifting attack traffic. 
 
 -What is the advantage of a jump box?
 To give access to the user from a single node that can be secured and monitored. This server sits in front of other machines (Load Balancer, Web Servers, ELK Server) which are not directly exposed to the public internet
-It controls access to the other machines by allowing connections from specific IP addresses and forwarding network traffic to our other VMs
+It controls access to the other machines by allowing connections from specific IP addresses and forwarding network traffic to our other VMs.
 
 
 
